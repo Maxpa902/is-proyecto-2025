@@ -1,0 +1,85 @@
+@import "bootstrap/dist/css/bootstrap.min.css";
+@import "./components/botones.css";
+@import "./components/navbar.css";
+@import "./components/footer.css";
+@import "./components/modal.css";
+@import "./components/input.css";
+@import "./components/sidebar.css";
+@import "./layouts/invitado.css";
+@import "./layouts/recepcionista.css";
+@import"./recepcionista/detalles-clase.css";
+@import"./components/notificacion.css";
+
+:root {
+    /* Colores principales */
+    --light-cyan: #e0f7faff;
+    --light-cyan-2: #c0eff5ff;
+    --non-photo-blue: #80deeaff;
+    --moonstone: #00bcd4ff;
+    --moonstone-light: #00bcd41a;
+    --moonstone-2: #00a5baff;
+
+    /* Neutros */
+    --white: #ffffff;
+    --black: #000000;
+    --gray-50: #f9fafb;
+    --gray-100: #f3f4f6;
+    --gray-200: #e5e7eb;
+    --gray-300: #d1d5db;
+    --gray-400: #9ca3af;
+    --gray-500: #6b7280;
+    --gray-600: #4b5563;
+    --gray-700: #374151;
+    --gray-800: #1f2937;
+    --gray-900: #111827;
+
+    /* Complementario (naranja) */
+    --accent: #ff5722;
+    --accent-light: #ffebe3;
+    --accent-dark: #e64a19;
+
+    /* Estados y feedback */
+    --success: #10b981;
+    --success-light: #d1fae5;
+    --error: #ef4444;
+    --error-light: #fee2e2;
+    --warning: #f59e0b;
+    --warning-light: #fef3c7;
+    --info: #3b82f6;
+    --info-light: #dbeafe;
+
+    /* Estados deshabilitados */
+    --disabled: var(--gray-400);
+    --disabled-bg: var(--gray-100);
+    --disabled-text: var(--gray-400);
+
+    /* Texto sobre fondos */
+    --text-primary: var(--gray-900);
+    --text-secondary: var(--gray-600);
+    --text-muted: var(--gray-400);
+    --text-on-primary: var(--white);
+
+    /* Bordes */
+    --border-light: var(--gray-200);
+    --border-medium: var(--gray-300);
+    --border-focus: var(--moonstone);
+
+    --input-border-radius: 8px;
+    --input-padding: 0.875rem 1rem;
+    --input-font-size: 1rem;
+    --input-border-width: 2px;
+    --input-transition: all 0.3s ease;
+
+}
+
+.texto-primario {
+    color: var(--text-primary);
+}
+
+.texto-secundario {
+    color: var(--text-secondary);
+}
+
+.texto-muted {
+    color: var(--text-muted);
+}

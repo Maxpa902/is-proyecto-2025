@@ -1,0 +1,218 @@
+/* Botón Primario - Principal */
+.boton-primario {
+    width: auto;
+    padding: 1rem;
+    background: var(--moonstone);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(0, 188, 212, 0.2);
+}
+
+.boton-primario:hover {
+    background: var(--moonstone-2);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 188, 212, 0.3);
+}
+
+.boton-primario:active {
+    transform: translateY(0);
+}
+
+.boton-secundario {
+    width: auto;
+    padding: 1rem;
+    background: var(--gray-200);
+    color: var(--text-primary);
+    border: 1px solid var(--border-medium);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.boton-secundario:hover {
+    background: var(--gray-300);
+    color: var(--text-primary);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.15);
+    border-color: var(--gray-400);
+}
+
+.boton-secundario:active {
+    transform: translateY(0);
+}
+
+.boton-terciario {
+    width: auto;
+    padding: 1rem;
+    background: transparent;
+    color: var(--moonstone);
+    border: 2px solid var(--moonstone);
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.boton-terciario:hover {
+    background: var(--light-cyan);
+    color: var(--moonstone-2);
+    transform: translateY(-2px);
+    border-color: var(--moonstone-2);
+    box-shadow: 0 4px 8px rgba(0, 188, 212, 0.2);
+}
+
+.boton-terciario:active {
+    transform: translateY(0);
+    background: var(--light-cyan-2);
+}
+
+/* Botón Accent - Color complementario */
+.boton-acento {
+    width: auto;
+    padding: 1rem;
+    background: var(--accent);
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 4px 6px rgba(255, 87, 34, 0.2);
+}
+
+.boton-acento:hover {
+    background: var(--accent-dark);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(255, 87, 34, 0.3);
+}
+
+.boton-acento:active {
+    transform: translateY(0);
+}
+
+/* Estados deshabilitados para todos */
+.boton-primario:disabled,
+.boton-secundario:disabled,
+.boton-terciario:disabled,
+.boton-acento:disabled {
+    background: var(--disabled-bg);
+    color: var(--disabled-text);
+    border-color: var(--disabled);
+    cursor: not-allowed;
+    transform: none;
+    box-shadow: none;
+}
+
+/* Efecto de onda (opcional) */
+.boton-primario::before,
+.boton-secundario::before,
+.boton-terciario::before,
+.boton-acento::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 0;
+    height: 0;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.3);
+    transform: translate(-50%, -50%);
+    transition: width 0.6s, height 0.6s;
+}
+
+.boton-primario:active::before,
+.boton-secundario:active::before,
+.boton-terciario:active::before,
+.boton-acento:active::before {
+    width: 300px;
+    height: 300px;
+}
+
+/* Variantes de tamaño */
+.boton-pequenio {
+    padding: 0.5rem 1rem;
+    font-size: 0.875rem;
+    margin-bottom: 1rem;
+}
+
+.boton-grande {
+    padding: 1.25rem 2rem;
+    font-size: 1.125rem;
+    margin-bottom: 2rem;
+}
+
+.boton-ancho-completo {
+    width: 100%;
+}
+
+/* Estados de carga */
+.boton-cargando {
+    cursor: not-allowed;
+    opacity: 0.8;
+}
+
+/* Spinner simple */
+.boton-spinner {
+    width: 16px;
+    height: 16px;
+    margin-right: 8px;
+    animation: boton-girar 0.8s linear infinite;
+}
+
+@keyframes boton-girar {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Tamaños para botones pequeños */
+.boton-pequenio .boton-spinner {
+    width: 14px;
+    height: 14px;
+    margin-right: 6px;
+}
+
+/* Tamaños para botones grandes */
+.boton-grande .boton-spinner {
+    width: 18px;
+    height: 18px;
+    margin-right: 10px;
+}

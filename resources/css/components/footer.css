@@ -1,0 +1,55 @@
+/* Contenedor principal con flexbox */
+.content-wrapper-admin {
+    min-height: calc(100vh - 70px);
+    /* Altura total menos header si existe */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Área de contenido principal que crece */
+.main-content-area {
+    flex: 1;
+    padding: 0;
+    /* Tu padding actual */
+}
+
+/* Footer que se pega abajo */
+.footer {
+    background: var(--gray-200);
+    border-top: 1px solid var(--gray-300);
+    padding: 1.5rem 0;
+    margin-top: auto;
+    flex-shrink: 0;
+}
+
+/* Container del footer */
+.footer-container {
+    max-width: 1400px;
+    margin: 0 auto;
+    padding: 0 2rem;
+    text-align: center;
+}
+
+/* Texto del copyright */
+.footer-text {
+    color: var(--gray-800);
+    font-size: 0.875rem;
+    margin: 0;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 767.98px) {
+    .footer {
+        padding: 1rem 0;
+    }
+
+    .footer-container {
+        padding: 0 1rem;
+    }
+
+    .footer-text {
+        font-size: 0.8rem;
+    }
+}

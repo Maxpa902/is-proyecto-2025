@@ -1,0 +1,379 @@
+/* resources/css/components/natatory-login.css */
+
+/* Reset body para layout personalizado */
+.natatory-body {
+    margin: 0;
+    padding: 0;
+    min-height: 100vh;
+    background: var(--gray-100);
+}
+
+/* Contenedor principal del componente - Layout tradicional */
+.natatory-login {
+    min-height: 100vh;
+    background: linear-gradient(135deg, var(--light-cyan) 0%, var(--light-cyan-2) 50%, var(--non-photo-blue) 100%);
+    display: flex;
+    flex-direction: column;
+    position: relative;
+}
+
+/* Header principal con título */
+.natatory-header {
+    background: var(--white);
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 1.5rem 0;
+    text-align: center;
+    position: relative;
+    z-index: 10;
+}
+
+.natatory-title {
+    font-size: 2rem;
+    font-weight: 700;
+    color: var(--moonstone);
+    margin: 0;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+    transition: color 0.3s ease;
+}
+
+.natatory-title:hover {
+    color: var(--moonstone-2);
+}
+
+/* Contenedor principal del formulario */
+.natatory-container {
+    flex: 1;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 2rem 1rem;
+}
+
+/* Tarjeta del formulario */
+.natatory-card {
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+    padding: 2.5rem;
+    width: 100%;
+    max-width: 400px;
+    position: relative;
+    overflow: hidden;
+}
+
+.natatory-card::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 4px;
+    background: linear-gradient(90deg, var(--moonstone), var(--non-photo-blue));
+}
+
+/* Título del formulario */
+.login-title {
+    text-align: center;
+    color: var(--moonstone);
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin: 0 0 2rem 0;
+    position: relative;
+}
+
+.login-title::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 50px;
+    height: 2px;
+    background: var(--non-photo-blue);
+    border-radius: 1px;
+}
+
+/* Mensaje de estado */
+.status-message {
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+    text-align: center;
+    transition: all 0.3s ease;
+}
+
+.status-message.success {
+    background: var(--success-light);
+    color: var(--success);
+    border: 1px solid var(--success);
+}
+
+.status-message.error {
+    background: var(--error-light);
+    color: var(--error);
+    border: 1px solid var(--error);
+}
+
+/* Formulario */
+.login-form {
+    width: 100%;
+}
+
+/* Grupo de campos */
+.form-group {
+    margin-bottom: 1.5rem;
+}
+
+.form-group.checkbox-group {
+    margin-bottom: 1rem;
+}
+
+/* Etiquetas - Estilizar componentes Laravel */
+.form-label,
+.natatory-login label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: var(--gray-700);
+    font-size: 0.9rem;
+}
+
+/* Campos de entrada - Sobrescribir estilos de x-text-input */
+.form-input,
+.natatory-login input[type="email"],
+.natatory-login input[type="password"] {
+    width: 100%;
+    padding: 0.875rem 1rem;
+    border: 2px solid var(--gray-200);
+    border-radius: 8px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+    background: var(--white);
+    color: var(--gray-900);
+    box-shadow: none;
+}
+
+.form-input:focus,
+.natatory-login input[type="email"]:focus,
+.natatory-login input[type="password"]:focus {
+    outline: none;
+    border-color: var(--moonstone);
+    box-shadow: 0 0 0 3px rgba(0, 188, 212, 0.1);
+    background: var(--gray-50);
+    ring: none;
+}
+
+.form-input:disabled,
+.natatory-login input:disabled {
+    background: var(--gray-100);
+    color: var(--gray-500);
+    cursor: not-allowed;
+}
+
+.form-input.error,
+.natatory-login input.error {
+    border-color: var(--error);
+    background: var(--error-light);
+}
+
+.form-input::placeholder,
+.natatory-login input::placeholder {
+    color: var(--gray-400);
+}
+
+/* Checkbox */
+.checkbox-label {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    user-select: none;
+}
+
+.checkbox-input {
+    width: 1.125rem;
+    height: 1.125rem;
+    margin-right: 0.5rem;
+    border: 2px solid var(--gray-300);
+    border-radius: 4px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    accent-color: var(--moonstone);
+}
+
+.checkbox-input:checked {
+    background: var(--moonstone);
+    border-color: var(--moonstone);
+}
+
+.checkbox-text {
+    color: var(--gray-600);
+    font-size: 0.9rem;
+}
+
+/* Botón principal - Sobrescribir x-primary-button */
+.login-button,
+.natatory-login .login-button {
+    width: 100%;
+    padding: 1rem;
+    background: linear-gradient(135deg, var(--moonstone), var(--moonstone-2));
+    color: var(--white);
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.login-button:hover:not(:disabled),
+.natatory-login .login-button:hover:not(:disabled) {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 20px rgba(0, 188, 212, 0.3);
+    background: linear-gradient(135deg, var(--moonstone-2), var(--moonstone));
+}
+
+.login-button:active:not(:disabled),
+.natatory-login .login-button:active:not(:disabled) {
+    transform: translateY(0);
+}
+
+.login-button:disabled,
+.natatory-login .login-button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Contenido del botón con loading */
+.loading-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+}
+
+/* Spinner de carga */
+.spinner {
+    width: 1rem;
+    height: 1rem;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-top: 2px solid var(--white);
+    border-radius: 50%;
+    animation: spin 1s linear infinite;
+}
+
+@keyframes spin {
+    0% {
+        transform: rotate(0deg);
+    }
+
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+/* Enlaces del formulario */
+.form-links {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.register-link,
+.forgot-link {
+    color: var(--moonstone);
+    text-decoration: none;
+    font-weight: 500;
+    font-size: 0.9rem;
+    transition: color 0.3s ease;
+    background: none;
+    border: none;
+    cursor: pointer;
+}
+
+.register-link:hover,
+.forgot-link:hover {
+    color: var(--moonstone-2);
+    text-decoration: underline;
+}
+
+.register-link:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+/* Mensajes de error - Compatible con x-input-error */
+.error-message,
+.natatory-login .error-message,
+.natatory-login .mt-2 {
+    display: block;
+    color: var(--error);
+    font-size: 0.8rem;
+    margin-top: 0.25rem;
+    font-weight: 500;
+    line-height: 1.4;
+}
+
+/* Session status styling - Reemplazo de x-auth-session-status */
+.session-status {
+    margin-bottom: 1rem;
+    padding: 0.75rem 1rem;
+    border-radius: 8px;
+    font-weight: 500;
+    background: var(--info-light);
+    color: var(--info);
+    border: 1px solid var(--info);
+}
+
+/* Responsive Design */
+@media (max-width: 640px) {
+    .natatory-title {
+        font-size: 1.5rem;
+        padding: 0 1rem;
+    }
+
+    .natatory-header {
+        padding: 1rem 0;
+    }
+
+    .natatory-card {
+        padding: 1.5rem;
+        margin: 0 0.5rem;
+        border-radius: 12px;
+    }
+
+    .login-title {
+        font-size: 1.5rem;
+    }
+
+    .form-input {
+        padding: 0.75rem;
+        font-size: 0.95rem;
+    }
+
+    .login-button {
+        padding: 0.875rem;
+    }
+}
+
+@media (max-width: 360px) {
+    .natatory-container {
+        padding: 1rem 0.5rem;
+    }
+
+    .natatory-card {
+        padding: 1.25rem;
+    }
+
+    .login-title {
+        font-size: 1.25rem;
+    }
+}

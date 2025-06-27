@@ -1,0 +1,53 @@
+.calendario-columnas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 1rem;
+    padding: 1.5rem;
+    border-radius: 16px;
+}
+
+.columna-dia {
+    background-color: var(--white);
+    border-radius: 12px;
+    padding: 1rem;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+}
+
+.columna-dia h3 {
+    background-color: var(--moonstone);
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+    padding: 0.5rem;
+    border-radius: 8px;
+    margin: 0;
+}
+
+.actividad-horario {
+    background-color: var(--white);
+    color: var(--gray-800);
+    border: 1px solid var(--moonstone);
+    border-radius: 8px;
+    padding: 0.5rem;
+    font-size: 0.85rem;
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    transition: transform 0.2s ease;
+}
+
+
+
+.calendario-titulo {
+    color: var(--moonstone);    /* Color primario (ajustalo a tu variable o color deseado) */
+    text-align: center;         /* Centrar texto */
+    margin-bottom: 0.5rem;      /* Espacio debajo */
+    margin-top: 0.5rem;      /* Espacio debajo */
+    text-transform: uppercase;  /* Mayúsculas */
+    letter-spacing: 2px;        /* Espaciado entre letras */
+    font-weight: 900;
+}
+

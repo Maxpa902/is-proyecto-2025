@@ -1,0 +1,400 @@
+/* guest.css - Layout para usuarios no autenticados */
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    overflow-x: hidden;
+}
+
+/* Body - Altura completa de la ventana */
+.natatory-body {
+    height: 100vh;
+    max-height: 100vh;
+    overflow: hidden;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    font-family: 'Figtree', sans-serif;
+    background: var(--gray-50);
+    color: var(--gray-900);
+    line-height: 1.5;
+}
+
+/* Main Content - Ocupa el resto del espacio */
+.main-content {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: hidden;
+    background: var(--gray-50);
+    position: relative;
+
+}
+
+/* Área de contenido con scroll */
+.content-scroll-area {
+    flex: 1;
+    
+    overflow-y: auto;
+    overflow-x: hidden;
+    background: var(--gray-50);
+}
+
+/* Wrapper que asegura que el contenido ocupe todo el espacio */
+.content-wrapper {
+    min-height: 100%;
+}
+
+/* Scrollbar personalizada para el contenido */
+.content-scroll-area::-webkit-scrollbar {
+    width: 10px;
+}
+
+.content-scroll-area::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.content-scroll-area::-webkit-scrollbar-thumb {
+    background: var(--gray-300);
+    border-radius: 3px;
+}
+
+.content-scroll-area::-webkit-scrollbar-thumb:hover {
+    background: var(--gray-400);
+}
+
+/* El footer queda fijo abajo */
+.main-content .footer {
+    flex-shrink: 0;
+}
+
+/* Scrollbar personalizada para main content */
+.main-content::-webkit-scrollbar {
+    width: 6px;
+}
+
+.main-content::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+.main-content::-webkit-scrollbar-thumb {
+    background: var(--gray-300);
+    border-radius: 3px;
+}
+
+.main-content::-webkit-scrollbar-thumb:hover {
+    background: var(--gray-400);
+}
+
+/* Contenedor básico con padding */
+.content-container {
+    padding: 0;
+    min-height: calc(100% - 4rem);
+    max-width: 1400px;
+    margin: 0 auto;
+}
+
+/* Contenedor para páginas con fondo blanco */
+.content-card {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border: 1px solid var(--border-light);
+    padding: 2rem;
+    margin: 2rem;
+    min-height: calc(100% - 4rem);
+}
+
+/* Layout para dashboard */
+.dashboard-layout {
+    padding: 2rem;
+    min-height: 100%;
+    background: var(--gray-50);
+}
+
+.dashboard-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1.5rem;
+    margin-top: 1.5rem;
+}
+
+/* Layout para autenticación */
+.auth-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    background: linear-gradient(135deg, var(--light-cyan-2), var(--gray-50));
+    padding: 2rem;
+}
+
+.auth-container {
+    width: 100%;
+    max-width: 450px;
+    background: var(--white);
+    border-radius: 16px;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.1);
+    border: 1px solid var(--border-light);
+    overflow: hidden;
+}
+
+.auth-header {
+    background: linear-gradient(135deg, var(--moonstone), var(--moonstone-2));
+    color: var(--white);
+    padding: 2rem;
+    text-align: center;
+}
+
+.auth-body {
+    padding: 2rem;
+}
+
+/* Layout para formularios */
+.form-layout {
+    padding: 2rem;
+    min-height: 100%;
+}
+
+.form-container {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border: 1px solid var(--border-light);
+    overflow: hidden;
+}
+
+.form-header {
+    background: var(--gray-50);
+    border-bottom: 1px solid var(--border-light);
+    padding: 1.5rem 2rem;
+}
+
+.form-body {
+    padding: 2rem;
+}
+
+/* Layout para tablas */
+.table-layout {
+    padding: 2rem;
+    min-height: 100%;
+}
+
+.table-container {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border: 1px solid var(--border-light);
+    overflow: hidden;
+    height: calc(100vh - 200px);
+    display: flex;
+    flex-direction: column;
+}
+
+.table-header {
+    background: var(--gray-50);
+    border-bottom: 1px solid var(--border-light);
+    padding: 1.5rem 2rem;
+    flex-shrink: 0;
+}
+
+.table-body {
+    flex: 1;
+    overflow-y: auto;
+    padding: 0;
+}
+
+.table-body table {
+    margin: 0;
+}
+
+/* Layout para centrar contenido */
+.center-layout {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100%;
+    text-align: center;
+    padding: 2rem;
+}
+
+/* Layout de dos columnas */
+.two-column-layout {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 2rem;
+    padding: 2rem;
+    min-height: 100%;
+}
+
+/* Utilidades de layout */
+.full-height {
+    height: 100%;
+}
+
+.sticky-header {
+    position: sticky;
+    top: 0;
+    background: var(--white);
+    z-index: 10;
+    border-bottom: 1px solid var(--border-light);
+}
+
+.scrollable-content {
+    overflow-y: auto;
+    flex: 1;
+}
+
+/* Cards y componentes */
+.card-modern {
+    background: var(--white);
+    border-radius: 12px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    border: 1px solid var(--border-light);
+    transition: all 0.3s ease;
+}
+
+.card-modern:hover {
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 991.98px) {
+    .natatory-body {
+        background: var(--white);
+    }
+
+    .content-wrapper {
+        padding: 1.5rem;
+    }
+
+    .content-container,
+    .dashboard-layout,
+    .form-layout,
+    .table-layout {
+        padding: 0;
+    }
+
+    .content-card {
+        margin: 1rem 0;
+        padding: 1.5rem;
+        border-radius: 8px;
+    }
+
+    .dashboard-grid {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+    }
+
+    .two-column-layout {
+        grid-template-columns: 1fr;
+        gap: 1rem;
+        padding: 0;
+    }
+
+    .auth-container {
+        margin: 1rem;
+        border-radius: 12px;
+    }
+
+    .auth-header {
+        padding: 1.5rem;
+    }
+
+    .auth-body {
+        padding: 1.5rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .natatory-body {
+        height: auto;
+        max-height: none;
+        overflow: visible;
+    }
+
+    .main-content {
+        flex: none;
+        display: block;
+        overflow: visible;
+    }
+
+    .content-scroll-area {
+        overflow: visible;
+    }
+
+    .content-wrapper {
+        padding: 1rem;
+    }
+}
+
+/* Animaciones */
+@keyframes fade-in {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.content-wrapper,
+.content-container,
+.content-card,
+.auth-container,
+.form-container,
+.table-container {
+    animation: fade-in 0.3s ease-out;
+}
+
+/* Estados de carga */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(255, 255, 255, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 9999;
+    backdrop-filter: blur(2px);
+}
+
+/* Print styles */
+@media print {
+    .navbar {
+        display: none;
+    }
+
+    .natatory-body {
+        height: auto;
+        max-height: none;
+        overflow: visible;
+    }
+
+    .main-content {
+        flex: none;
+        overflow: visible;
+    }
+
+    .content-scroll-area {
+        overflow: visible;
+    }
+
+    .content-wrapper {
+        min-height: auto;
+        padding: 1rem;
+    }
+}

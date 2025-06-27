@@ -1,0 +1,96 @@
+/* cliente.css */
+
+.cliente-body {
+    background-color: #f0f8ff; /* un azul muy suave */
+    color: #1a202c; /* texto gris oscuro */
+    font-family: 'Figtree', sans-serif;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.main-content {
+    flex: 1;
+    padding: 2rem;
+    max-width: 1024px;
+    margin: 0 auto;
+}
+
+.content-scroll-area {
+    overflow-y: auto;
+    max-height: calc(100vh - 150px); /* espacio para navbar y footer */
+}
+
+.content-wrapper {
+    background: #fff;
+    border-radius: 8px;
+    padding: 1.5rem 2rem;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+/* Navbar personalizado para cliente */
+.navbar {
+    background-color: #4a90e2; /* azul medio */
+    color: #fff;
+}
+
+.navbar a, .navbar a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Footer simple */
+footer {
+    text-align: center;
+    padding: 1rem 0;
+    font-size: 0.9rem;
+    color: #666;
+}
+
+/* Botones principales para cliente */
+.btn-primary {
+    background-color: #4a90e2;
+    color: white;
+    border-radius: 5px;
+    border: none;
+    padding: 0.5rem 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.btn-primary:hover {
+    background-color: #357abd;
+}
+
+/* Loading overlay estilo */
+.loading-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: rgba(255, 255, 255, 0.8);
+    z-index: 1050;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Notificaciones (si usas un componente de alertas) */
+.notificacion {
+    position: fixed;
+    bottom: 1rem;
+    right: 1rem;
+    background: #4a90e2;
+    color: white;
+    padding: 1rem 1.5rem;
+    border-radius: 6px;
+    box-shadow: 0 3px 8px rgba(0,0,0,0.2);
+    animation: fadein 0.5s ease forwards;
+}
+
+@keyframes fadein {
+    from {opacity: 0; transform: translateY(10px);}
+    to {opacity: 1; transform: translateY(0);}
+}
+   

@@ -1,0 +1,30 @@
+.primero {
+    background: var(--moonstone);
+}
+.segundo {
+    background: var(--moonstone-2);
+}
+.tercero {
+    background: var(--non-photo-blue);
+}
+.cuarto {
+    background: var(--light-cyan-2);
+}
+.quinto {
+    background: var(--light-cyan);
+}
+.primero-letra {
+    color: var(--moonstone);
+}
+.segundo-letra {
+    color: var(--moonstone-2);
+}
+.tercero-letra {
+    color: var(--non-photo-blue);
+}
+.cuarto-letra {
+    color: var(--light-cyan-2);
+}
+.quinto-letra {
+    color: var(--light-cyan);
+}
